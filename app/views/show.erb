@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<h2><%= @article.title %></h2>
+</br>
+<p><%= @article.content %></p>
+
+
+<!--Adds delete button, when clicked is redirected to /articles- see delete in app controller-->
+<form action="/articles/<%= @article.id %>/delete" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="delete" />
+  <input type="submit" value="delete" />
+</form>

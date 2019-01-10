@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+
+<h2><%= @article.title %></h2>
+<h3><%= @article.content %></h3>
+
+<form action="/articles/<%= @article.id %>" method="POST">
+  <!--below line has hidden input field that will submit our form via patch-->
+  <input id="hidden" type="hidden" name="_method" value="PATCH" />
+
+  New Title: <input type="text" name="title" />
+  New Content: <input type="text" name="content" />
+
+  <input type="submit" value="submit"/>
+</form>
+
+</html>
